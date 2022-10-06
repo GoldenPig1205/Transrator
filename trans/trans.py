@@ -58,8 +58,8 @@ async def on_ready():
 
 @tree.context_menu(name="📟 해당 메세지 번역")
 async def translate_this_message(interaction: discord.Interaction, message: discord.Message):
-    _client_id = "ggMmuA4b69gftAhECbHW"
-    _client_secret = "HajFlzmagI"
+    _client_id = "언어 감지 API ID"
+    _client_secret = "언어 감지 API Secret"
 
     _url = "https://openapi.naver.com/v1/papago/detectLangs"
     _headers = {"X-Naver-Client-Id": _client_id,
@@ -69,8 +69,8 @@ async def translate_this_message(interaction: discord.Interaction, message: disc
 
     _res = requests.post(_url, data=_data, headers=_headers)
 
-    client_id = "STiBgFXmrOL7xroLTa3Q"
-    client_secret = "otZpQN3EqY"
+    client_id = "파파고 번역 API ID"
+    client_secret = "파파고 번역 API Secret"
 
     url = "https://openapi.naver.com/v1/papago/n2mt"
     headers = {"X-Naver-Client-Id": client_id,
@@ -113,8 +113,8 @@ class 번역(app_commands.Group):
             async def on_submit(self, inter: discord.Interaction):
                 def input_():
                     if input_언어.value == "sr":
-                        _client_id = "ggMmuA4b69gftAhECbHW"
-                        _client_secret = "HajFlzmagI"
+                        _client_id = "언어 감지 API ID"
+                        _client_secret = "언어 감지 API Secret"
 
                         _url = "https://openapi.naver.com/v1/papago/detectLangs"
                         _headers = {"X-Naver-Client-Id": _client_id,
@@ -129,8 +129,8 @@ class 번역(app_commands.Group):
                     else:
                         return input_언어.value
 
-                client_id = "STiBgFXmrOL7xroLTa3Q"
-                client_secret = "otZpQN3EqY"
+                client_id = "파파고 번역 API ID"
+                client_secret = "파파고 번역 API Secret"
 
                 url = "https://openapi.naver.com/v1/papago/n2mt"
                 headers = {"X-Naver-Client-Id": client_id,
